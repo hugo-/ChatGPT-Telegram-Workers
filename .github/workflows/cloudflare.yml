@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 16
       - run: touch wrangler.toml
-      - run: cat ${{secrets.WRANGLER_TOML}}
+      - run: cat ${{ secrets.WRANGLER_TOML }}
       - run: |
           cat << 'EOF' > wrangler.toml
           ${{secrets.WRANGLER_TOML}} 
